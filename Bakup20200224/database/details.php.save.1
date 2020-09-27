@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="bhp.css">
+<body>
+
+<?php
+$plik = $_GET['data'];
+$fileweek = substr($plik, 0, 2);
+$fileyear = substr($plik, 2, 4);
+$filemonth = substr($plik, 6, 2);
+$fileday = substr($plik, 8, 2);
+$xml=simplexml_load_file($plik);;
+/*echo $xml->getName() . "<br>";/*
+foreach($xml->children() as $child)
+  {
+  echo $child->getName() . ": " . $child . "<br>";
+  }
+*/
+$xml=simplexml_load_file($plik) or die("Error: Cannot create object");
+foreach($xml->children() as $body) {
+$count += substr_count($plik, "2");
+}
+?>
+<br>
+<button onclick="location.href='../bhp.php'" type="button"> Formularz</button>
+<button onclick="location.href='BHP-List.php'" type="button"> Lista </button>
+<table class="custom_class">
+<tr><th> <?php echo ' Rok:', $fileyear, ' miesiac:', $filemonth, ' Dzien:',$fileday, ' tydzien:',$fileweek; ?></th></tr>
+<tr><th>PIRAMIDA</th><th>WPISY</th></tr>
+<tr><td>
+<table>
+<tr>
+	<th width="200px" align="center">
+		<div class="trapez trapez-1">LTI1st</br>Wypadek ciezki</div>
+	</th>
+	<th width="100px" align="center"><div class="trapezOpis"><?php echo $body->dzial . ", ";?> </div> </th>
+<th width="100px" align="center"><div class="trapezOpis">522 </div> </th>
+</tr>
+<tr>
+	<th align="center"> 
+		<div class="trapez trapez-2">LTI IInd</br>wypadek przy pracy z L4</div>
+	</th>
+<th width="100px" align="center"><div class="trapezOpis">0 </div> </th>
+<th width="200px" align="center"> <div class="trapezOpis"> test </div>  </th>
+</tr>
+<tr>
+	<th align="center"> 
+		<div class="trapez trapez-3">MI</br>Uraz lekko, Skaleczenie</div>
+	</th>
+<th width="100px" align="center"><div class="trapezOpis">31 </div> </th>
+<th width="200px" align="center"> <div class="trapezOpis"> 17 </div>  </th>
+</tr>
+<tr>
+	<th align="center"> 
+		<div class="trapez trapez-4">NMI</br> Zdarzenie potencjalnie niebezpieczne</div>
+	</th>
+<th width="100px" align="center"><div class="trapezOpis">55</div> </th>
+<th width="200px" align="center"> <div class="trapezOpis"> test </div>  </th>
+</tr>
+<tr>
+	<th align="center"> 
+		<div class="trapez trapez-5">PH</br>Warunki i zachowanie niebezpieczne</div>
+	</th>
+<th width="100px" align="center"><div class="trapezOpis">12 </div> </th>
+<th width="200px" align="center"> <div class="trapezOpis"> test </div>  </th>
+</tr>
+</table>
+</td>
+<td style="width:40%;text-align:left;vertical-align:top;padding-left:10px;font-size:9px;border-left: 2px solid black"> 
+<?php $xml=simplexml_load_file($plik) or die("Error: Cannot create object");
+foreach($xml->children() as $body) {
+        echo $body->data . ", ";
+        echo $body->imie . ", ";
+        echo $body->dzial . ", ";
+        echo $body->temat ."" ;
+<input type="submit" name="submit" value="Submit">
+	echo '<button onclick="location.href=',"'", "../bhp.php',", ' type="button"> Formularz</button><br>';
+}
+?>
+</td>
+</tr>
+</table>
+</body>
+</html>

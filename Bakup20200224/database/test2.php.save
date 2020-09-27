@@ -1,0 +1,8 @@
+
+<?php
+$xml=simplexml_load_file("0720200213.xml") or die("Error: Cannot create object");
+foreach($xml->children() as $books) {
+    echo $form->for['lang'];
+    echo "<br>";
+}
+?>

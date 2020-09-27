@@ -1,0 +1,123 @@
+.custom_class {
+  font-size:12px;
+  background-color: #FFF;
+  border: 1px solid black;
+  text-align: center;
+  width: 90%;
+  padding: 25px 50px 50px;
+  align: center;
+}
+
+.celDesk .td {
+  font-size:2px;
+  background-color: #FFF;
+  border: 1px solid black;
+  text-align: left;
+  width: 90%;
+  padding: 25px 50px 50px;
+  align: left;
+}
+
+/*.table {
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.table2, .th, .td {
+  border: 5px solid black;
+  font-size: 12px:
+  width: 100%;
+  background-color: #FFF;
+  text-align: center;
+}
+
+*/
+body {
+  background-color: lightblue;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+.trapez {
+  border-bottom: 50px solid red;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  text-align: right;
+}
+.trapezOpis {
+  border: 1px solid black;
+  background-color: #FFF;
+  height: 25px;
+  width: 25px;
+  padding: 4px;
+}
+
+.trapez-1 {
+  border-bottom: 1000px solid red;
+  width: 101px;
+}
+
+.trapez-2 {
+  border-bottom: 80px solid orange;
+  width: 130px;
+}
+
+.trapez-3 {
+  border-bottom: 80px solid green;
+width: 180px;
+}
+.trapez-4 {
+  border-bottom: 80px solid yellow;
+  width: 230px;
+}
+.trapez-5 {
+  border-bottom: 80px solid blue;
+  width: 280px;
+}
+
+.tg {
+}
+
+.tg .tg-1 {
+  padding-left: 200px;
+  text-align:center;
+  vertical-align:top}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  font-family: Arial;
+}
+
+.opis {
+  position: relative;
+  border: 1px solid black;
+  font-size: 25px;
+  padding: 25px 50px 50px;
+}
+
+
+form {
+  width: 100%;
+  font-size: 12px;
+  position : relative;
+  margin : 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  background : #FFF url(background.jpg);
+*/
+  /* we create our grid 
+   display  : grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 10em 1em 1em 1em;
+
+}

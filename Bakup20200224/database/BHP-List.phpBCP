@@ -1,0 +1,32 @@
+<html>
+<link rel="stylesheet" type="text/css" href="bhp.css">
+<center> <h3 class="guestbook-header"><br/>Raport zgloszen BHP</h3> </center>
+<body>
+<button onclick="location.href='../bhp.php'" type="button"> Formularz</button>
+<button onclick="location.href='../bhp.php'" type="button">2020</button>
+<button onclick="location.href='../bhp.php'" type="button">2019</button>
+<table class="custom_class">
+
+
+<tr><td>PLIK</td><td>Tydzień</td><td>Rok</td><td>Miesiac</td><td>Dzien</td><td>Ilosc Wpisow</td><td>Zobacz</td>
+<?php
+ 
+//Get a list of file paths using the glob function.
+//$fileList = glob("/var/www/html/database/*");
+$fileList = glob('??????????');
+//$fileweek = substr($filename, 0, 4);
+//Loop through the array that glob returned.
+foreach($fileList as $filename){
+$fileweek = substr($filename, 0, 2);
+$fileyear = substr($filename, 2, 4);
+$filemonth = substr($filename, 6, 2);
+$fileday = substr($filename, 8, 10);
+   //Simply print them out onto the screen.
+//   echo  $filename ; 
+//echo '<a href=', $filename, ' > ZOBACZ </a><BR>';
+echo '<tr><td>',  $filename, '</td><td>', $fileweek,'</td><td>',  $fileyear ,'</td><td>',  $filemonth,'</td><td>',  $fileday, '</td><td> 88 </td><td><a href=', $filename, ' > ZOBACZ </a><BR></td></tr>';
+}
+?>
+</table>
+</body>
+</html>

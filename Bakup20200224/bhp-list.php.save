@@ -1,0 +1,4 @@
+/path/to/my/directory<?php
+$directory = '/path/to/my/directory';
+$scanned_directory = array_diff(scandir($directory), array('..', '.'));
+?>

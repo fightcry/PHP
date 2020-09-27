@@ -1,0 +1,10 @@
+<?php
+$dom = new DOMDocument();
+$dom->load();
+$response = $dom->getElementsByTagName("form[@id='1302']");
+$response = $dom->getElementById('1302')->tagName;
+foreach ($response as $node){
+$node->nodeValue = $para;
+$response->nodeValue = "2";
+$dom->save($plik);
+?>
